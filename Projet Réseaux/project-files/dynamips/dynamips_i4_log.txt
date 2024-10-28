@@ -1,0 +1,24 @@
+Oct 28 09:42:58.767 HYPERVISOR: Release 0.2.23-amd64/Linux (tag 2023010200)
+Oct 28 09:42:58.767 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 38093.
+Oct 28 09:42:58.778 HYPERVISOR: exec_cmd: hypervisor version 
+Oct 28 09:42:58.779 HYPERVISOR: exec_cmd: hypervisor working_dir /home/rootbd/SAE_512/Projet Réseaux/project-files/dynamips 
+Oct 28 09:42:58.779 GENERAL: working_dir=/home/rootbd/SAE_512/Projet Réseaux/project-files/dynamips
+Oct 28 09:42:58.779 HYPERVISOR: exec_cmd: ethsw create Switch2 
+Oct 28 09:48:36.397 HYPERVISOR: exec_cmd: nio create_udp udp-57ea6081-6f72-4f3b-b6ad-18370bd37f41 10023 172.21.96.195 10022 
+Oct 28 09:48:36.397 HYPERVISOR: exec_cmd: ethsw add_nio Switch2 udp-57ea6081-6f72-4f3b-b6ad-18370bd37f41 
+Oct 28 09:48:36.416 HYPERVISOR: exec_cmd: ethsw set_access_port Switch2 udp-57ea6081-6f72-4f3b-b6ad-18370bd37f41 1 
+Oct 28 09:48:43.502 HYPERVISOR: exec_cmd: nio create_udp udp-fd62e388-0e3a-420b-9e65-8fe06130d835 10024 172.21.96.195 10025 
+Oct 28 09:48:43.503 HYPERVISOR: exec_cmd: ethsw add_nio Switch2 udp-fd62e388-0e3a-420b-9e65-8fe06130d835 
+Oct 28 09:48:43.524 HYPERVISOR: exec_cmd: ethsw set_access_port Switch2 udp-fd62e388-0e3a-420b-9e65-8fe06130d835 1 
+Oct 28 09:48:49.611 HYPERVISOR: exec_cmd: nio create_udp udp-3036f3e0-2bc8-44c8-920d-2a0bf4c1fa85 10026 172.21.96.195 10027 
+Oct 28 09:48:49.611 HYPERVISOR: exec_cmd: ethsw add_nio Switch2 udp-3036f3e0-2bc8-44c8-920d-2a0bf4c1fa85 
+Oct 28 09:48:49.632 HYPERVISOR: exec_cmd: ethsw set_access_port Switch2 udp-3036f3e0-2bc8-44c8-920d-2a0bf4c1fa85 1 
+Oct 28 09:48:55.711 HYPERVISOR: exec_cmd: nio create_udp udp-b26e8c2b-4bbd-4f67-9ef2-6df8f7d0f2df 10028 172.21.96.195 10029 
+Oct 28 09:48:55.711 HYPERVISOR: exec_cmd: ethsw add_nio Switch2 udp-b26e8c2b-4bbd-4f67-9ef2-6df8f7d0f2df 
+Oct 28 09:48:55.723 HYPERVISOR: exec_cmd: ethsw set_access_port Switch2 udp-b26e8c2b-4bbd-4f67-9ef2-6df8f7d0f2df 1 
+Oct 28 09:49:01.658 HYPERVISOR: exec_cmd: nio create_udp udp-07e54966-4653-4b26-bebb-a0fdd965d58a 10030 172.21.96.195 10031 
+Oct 28 09:49:01.659 HYPERVISOR: exec_cmd: ethsw add_nio Switch2 udp-07e54966-4653-4b26-bebb-a0fdd965d58a 
+Oct 28 09:49:01.673 HYPERVISOR: exec_cmd: ethsw set_access_port Switch2 udp-07e54966-4653-4b26-bebb-a0fdd965d58a 1 
+Oct 28 09:49:14.372 HYPERVISOR: exec_cmd: nio create_udp udp-edb93380-cd0c-4e1c-b35f-d83548b7339c 10032 172.21.96.195 10033 
+Oct 28 09:49:14.373 HYPERVISOR: exec_cmd: ethsw add_nio Switch2 udp-edb93380-cd0c-4e1c-b35f-d83548b7339c 
+Oct 28 09:49:14.393 HYPERVISOR: exec_cmd: ethsw set_access_port Switch2 udp-edb93380-cd0c-4e1c-b35f-d83548b7339c 1 
