@@ -1,6 +1,6 @@
 # SAE_512
 
-Ce fichier est à lire, explicatif du projet.
+Ce fichier est à lire sous format code, c'est un explicatif du projet.
 
 Ce projet vise à comprendre et mettre en œuvre les principes de l'agilité dans un contexte de projet informatique, en utilisant des outils de gestion de version (GitHub) et de gestion de projet (Jira). Le projet consiste à configurer un réseau informatique sous forme de code, en utilisant l'outil MARIONET, version .
 
