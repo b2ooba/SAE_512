@@ -57,7 +57,6 @@ net.ipv4.ip_forward = 1
 
  - Configuration des VLANs sur les Switchs :
 vlan/create 1
-
 vlan/create 2
 port/setvlan 2 1
 port/setvlan 3 1
@@ -74,7 +73,4 @@ port/setvlan 1 2
 
 Puis nous affilions chaque port correspondant au VLAN souhaité.
 Ainsi que le mode Trunk associé au port 1.
-
-
-
 
