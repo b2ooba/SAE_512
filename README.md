@@ -57,6 +57,7 @@ net.ipv4.ip_forward = 1
 
  - Configuration des VLANs sur les Switchs :
 vlan/create 1
+
 vlan/create 2
 port/setvlan 2 1
 port/setvlan 3 1
