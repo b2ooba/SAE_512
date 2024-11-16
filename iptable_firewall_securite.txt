@@ -1,0 +1,6 @@
+#Protection contre les attaques SYN flood (limitation de la vitesse des connexions) : Une règle pour limiter les attaques de type SYN flood (attaque DDoS de type DoS),
+ en autorisant un nombre limité de connexions par seconde.
+
+#Activation de la protection contre les attaques de type "smurf" (Ping flood amplifié)
+
+#Protection contre les attaques par Flood UDP
