@@ -1,0 +1,39 @@
+# Remise à zéro des règles existantes
+iptables -F
+iptables -X
+iptables -t nat -F
+iptables -t nat -X
+iptables -t mangle -F
+iptables -t mangle -X
+
+# Politique par défaut : bloquer tout
+iptables -P INPUT DROP
+iptables -P FORWARD DROP
+iptables -P OUTPUT DROP
+
+#autorise les connexions établie et lier
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+# Pour le serveur DHCP (ports 67 et 68)
+iptables -A INPUT -p udp --sport 67:68 --dport 67:68 -j ACCEPT
+iptables -A OUTPUT -p udp --sport 67:68 --dport 67:68 -j ACCEPT
+#autorise ICMP
+iptables -A INPUT -p icmp -j ACCEPT
+iptables -A OUTPUT -p icmp -j ACCEPT
+
+#navigation internet
+iptables -A FORWARD -p tcp --dport 80 -j ACCEPT    # HTTP
+iptables -A FORWARD -p tcp --dport 443 -j ACCEPT  # HTTPS
+iptables -A OUTPUT -p tcp --dport 80 -j ACCEPT    # HTTP
+iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT   # HTTPS
+#accès a l'internet
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+#LOG des traffic rejeter
+iptables -A INPUT -j LOG --log-prefix "INPUT DROP: "
+iptables -A FORWARD -j LOG --log-prefix "FORWARD DROP: "
+iptables -A OUTPUT -j LOG --log-prefix "OUTPUT DROP: "
+
+
+
