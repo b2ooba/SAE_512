@@ -1,6 +1,17 @@
-#Protection contre les attaques SYN flood (limitation de la vitesse des connexions) : Une règle pour limiter les attaques de type SYN flood (attaque DDoS de type DoS),
- en autorisant un nombre limité de connexions par seconde.
+1. Protection contre les attaques SYN flood
+Limiter le nombre de connexions TCP SYN :
 
-#Activation de la protection contre les attaques de type "smurf" (Ping flood amplifié)
 
-#Protection contre les attaques par Flood UDP
+iptables -A INPUT -p tcp --syn -m limit --limit 5/second -j ACCEPT
+iptables -A INPUT -p tcp --syn -j DROP
+2. Protection contre les attaques Smurf (Ping flood amplifié)
+Bloquer les pings vers les adresses de diffusion :
+
+
+iptables -A INPUT -p icmp --icmp-type echo-request -j DROP
+3. Protection contre les attaques UDP flood
+Limiter les paquets UDP :
+
+
+iptables -A INPUT -p udp -m limit --limit 10/second -j ACCEPT
+iptables -A INPUT -p udp -j DROP
